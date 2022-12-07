@@ -89,7 +89,6 @@ img {
 
 .header .container {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
 }
 .header {
@@ -166,6 +165,8 @@ img {
 /* portfolio and order buttons */
 
 .button {
+	padding: 12px 24px;
+
 	font-family: inherit;
 	font-weight: 700;
 	font-size: inherit;
@@ -195,6 +196,18 @@ img {
 
 /* sections */
 
+.work .secion-title,
+.team .secion-title {
+	text-align: center;
+	margin-bottom: 72px;
+}
+
+.advantages,
+.team {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
 .secion-title {
 	margin-top: 0;
 	margin-bottom: 0;
@@ -216,18 +229,16 @@ img {
 	color: var(--title-text-color);
 }
 
-.advantage-list .item + .item,
-.work-list .item + .item,
-.team-list .item + .item {
-	margin-left: 24px;
+.advantage-list,
+.work-list,
+.team-list {
+	column-gap: 24px;
 }
 
-.team .card {
-	padding: 32px 16px;
-	text-align: center;
-
-	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-	border-radius: 0px 0px 4px 4px;
+.advantage-list .title,
+.team-list .title,
+.card .title {
+	margin-bottom: 8px;
 }
 
 /* Order section */
@@ -244,8 +255,7 @@ img {
 	text-align: center;
 }
 
-.order.title {
-	margin-top: 0;
+.order-title {
 	margin-bottom: 48px;
 
 	font-weight: 700;
@@ -257,27 +267,11 @@ img {
 
 /* advantages section */
 
-.advantage-list {
-	align-items: center;
-}
-
 .advantage-list .item {
 	width: calc((100% - 24px * 3) / 4);
 }
 
-.advantages,
-.team {
-	padding-top: 120px;
-	padding-bottom: 120px;
-}
-
 /* work section */
-
-.work .secion-title,
-.team .secion-title {
-	text-align: center;
-	margin-bottom: 72px;
-}
 
 .work {
 	padding-bottom: 120px;
@@ -297,8 +291,12 @@ img {
 	background-color: var(--primary-background-color);
 }
 
-.team-list .title {
-	margin-bottom: 8px;
+.team .card {
+	padding: 32px 16px;
+	text-align: center;
+
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+	border-radius: 0px 0px 4px 4px;
 }
 
 /* portfolio-section */
@@ -308,53 +306,41 @@ img {
 	padding-bottom: 120px;
 }
 
-.portfolio-section .list {
+.button-list {
 	justify-content: center;
 	margin-bottom: 72px;
+	column-gap: 24px;
 }
-
-.button {
-	padding: 12px 24px;
-	margin-left: 24px;
-}
-
-/* .list .button:first-child {
-	margin-left: 0;
-} */
 
 .portfolio-list {
 	flex-wrap: wrap;
-	justify-content: center;
-	row-gap: 12px;
+	row-gap: 48px;
 	column-gap: 24px;
 }
 
 .portfolio-list .item {
 	width: calc((100% - 24px * 2) / 3);
 
-	border: 0.5px solid #f4f4fd;
+	border-bottom: 0.5px solid #f4f4fd;
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-list .card {
-	margin-top: 32px;
-	margin-bottom: 32px;
+	padding-top: 32px;
+	padding-bottom: 32px;
 	padding-left: 16px;
-}
-
-.card .title {
-	margin-bottom: 8px;
 }
 
 /* footer */
 
 .footer {
+	padding-top: 100px;
+	padding-bottom: 100px;
+
 	color: var(--footer-text-color);
 	background-color: var(--footer-bcg-color);
 }
 
 .footer .container {
-	padding-top: 100px;
-	padding-bottom: 100px;
 	padding-right: 864px;
 }
