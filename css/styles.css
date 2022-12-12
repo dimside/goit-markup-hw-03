@@ -12,6 +12,7 @@
 	--button-bcg-color: #f4f4fd;
 	--accent-text-color: #ffffff;
 	--accent-color: #4d5ae5;
+	--button-click-color: #404bbf;
 
 	--hero-text-color: #ffffff;
 	--hero-bcg-color: #2e2f42;
@@ -87,15 +88,17 @@ img {
 
 /* header section */
 
-.header .container {
-	display: flex;
-	justify-content: space-between;
-}
 .header {
 	padding-top: 24px;
 	padding-bottom: 24px;
+	height: 72px;
 	border-bottom: 1px solid #ffffff;
 	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header .container {
+	display: flex;
+	justify-content: space-between;
 }
 
 .site-nav .item + .item,
@@ -168,7 +171,7 @@ img {
 	padding: 12px 24px;
 
 	font-family: inherit;
-	font-weight: 700;
+	font-weight: 500;
 	font-size: inherit;
 	line-height: inherit;
 	letter-spacing: 0.04em;
@@ -179,19 +182,32 @@ img {
 	border-radius: 4px;
 }
 
-.order .button {
-	padding: 16px 32px;
-	border: 0;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	border-radius: 4px;
-
-	line-height: 1.2;
-}
-
 .button:hover,
 .button:focus {
 	color: var(--accent-text-color);
 	background-color: var(--accent-color);
+}
+
+.order-button {
+	padding: 16px 32px;
+
+	border: 0;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	color: var(--accent-text-color);
+	background-color: var(--button-text-color);
+
+	line-height: 1.2;
+}
+
+.order-button.button:hover {
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.order-button.button:focus,
+.order-button.button:active {
+	background-color: var(--button-click-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* sections */
@@ -250,8 +266,8 @@ img {
 }
 
 .order .container {
-	padding-left: 318px;
-	padding-right: 318px;
+	padding: 0;
+	width: 492px;
 	text-align: center;
 }
 
@@ -329,6 +345,7 @@ img {
 	padding-top: 32px;
 	padding-bottom: 32px;
 	padding-left: 16px;
+	padding-right: 16px;
 }
 
 /* footer */
@@ -341,6 +358,6 @@ img {
 	background-color: var(--footer-bcg-color);
 }
 
-.footer .container {
-	padding-right: 864px;
+.footer-main {
+	width: 264px;
 }
